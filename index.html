@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz Figures de style/Procédés/Mouvements/Registres littéraires</title>
+  <script>
+	const quiz = [
+		{ question: "Quelle figure de style consiste à exagérer ?", options: ["Antithèse", "Litote", "Hyperbole", "Chiasme"], answer: "Hyperbole" },
+		{ question: "Quelle figure de style est une atténuation ?", options: ["Euphémisme", "Métaphore", "Anaphore", "Oxymore"], answer: "Euphémisme" },
+		{ question: "‘Cette obscure clarté’ est un exemple de…", options: ["Oxymore", "Comparaison", "Litote", "Allégorie"], answer: "Oxymore" },
+		{ question: "Quel procédé consiste à répéter un mot en début de phrase ?", options: ["Anaphore", "Pléonasme", "Ellipse", "Métonymie"], answer: "Anaphore" },
+		{ question: "Quel procédé omet des éléments dans une phrase ?", options: ["Ellipse", "Anaphore", "Périphrase", "Synecdoque"], answer: "Ellipse" },
+		{ question: "La ‘couronne’ pour le roi est un exemple de…", options: ["Métonymie", "Allitération", "Litote", "Euphémisme"], answer: "Métonymie" },
+		{ question: "À quel mouvement appartient Victor Hugo ?", options: ["Réaliste", "Romantique", "Classique", "Lumières"], answer: "Romantique" },
+		{ question: "Quel mouvement prône la raison et le progrès ?", options: ["Romantisme", "Symbolisme", "Lumières", "Baroque"], answer: "Lumières" },
+		{ question: "Zola est associé au mouvement…", options: ["Romantique", "Réalisme", "Naturalisme", "Classicisme"], answer: "Naturalisme" },
+		{ question: "Quel registre cherche à faire peur ?", options: ["Lyrique", "Tragique", "Épique", "Fantastique"], answer: "Fantastique" },
+		{ question: "Quel registre exprime des émotions personnelles ?", options: ["Lyrique", "Polémique", "Comique", "Épidictique"], answer: "Lyrique" },
+		{ question: "Quel registre critique de manière violente ?", options: ["Satirique", "Épique", "Tragique", "Polémique"], answer: "Polémique" },
+  { question: "Quelle figure de style consiste à attribuer des qualités humaines à un objet ?", options: ["Personnification", "Allégorie", "Hyperbole", "Antiphrase"], answer: "Personnification" },
+  { question: "Quel procédé consiste à rapprocher deux termes opposés ?", options: ["Oxymore", "Anaphore", "Chiasme", "Comparaison"], answer: "Oxymore" },
+  { question: "La répétition insistante de sons identiques est une…", options: ["Allitération", "Assonance", "Onomatopée", "Hyperbole"], answer: "Allitération" },
+  { question: "Quel procédé consiste à remplacer un mot par un autre qui lui est proche ?", options: ["Métonymie", "Allégorie", "Comparaison", "Hyperbole"], answer: "Métonymie" },
+  { question: "La phrase ‘Cette obscure clarté qui tombe des étoiles’ est un exemple d’…", options: ["Oxymore", "Antithèse", "Litote", "Métaphore"], answer: "Oxymore" },
+  { question: "Quel procédé consiste à exagérer pour impressionner ?", options: ["Hyperbole", "Euphémisme", "Litote", "Ellipse"], answer: "Hyperbole" },
+  { question: "À quel courant littéraire appartient Molière ?", options: ["Classique", "Romantique", "Baroque", "Réalisme"], answer: "Classique" },
+  { question: "Quel mouvement littéraire valorise la nature et les sentiments ?", options: ["Romantisme", "Classicisme", "Naturalisme", "Symbolisme"], answer: "Romantisme" },
+  { question: "Quel mouvement prône la description réaliste de la société ?", options: ["Réalisme", "Romantisme", "Classicisme", "Baroque"], answer: "Réalisme" },
+  { question: "Quel registre provoque le rire ?", options: ["Comique", "Tragique", "Épique", "Lyrique"], answer: "Comique" },
+  { question: "Quel registre véhicule la grandeur et les exploits ?", options: ["Épique", "Fantastique", "Satirique", "Polémique"], answer: "Épique" },
+  { question: "Quel registre est marqué par la plainte et la mélancolie ?", options: ["Lyrique", "Tragique", "Comique", "Épique"], answer: "Lyrique" },
+  { question: "Quel procédé consiste à minimiser une réalité pour l'atténuer ?", options: ["Litote", "Hyperbole", "Oxymore", "Anaphore"], answer: "Litote" },
+  { question: "Quel est le contraire d’une hyperbole ?", options: ["Litote", "Antithèse", "Oxymore", "Allitération"], answer: "Litote" },
+  { question: "Quel procédé compare deux éléments avec un outil de comparaison ?", options: ["Comparaison", "Métaphore", "Allégorie", "Personnification"], answer: "Comparaison" },
+  { question: "Le ‘Soleil noir’ de Baudelaire est un exemple d’…", options: ["Oxymore", "Antithèse", "Hyperbole", "Litote"], answer: "Oxymore" },
+  { question: "Quel procédé consiste à substituer un terme général par un terme plus précis ?", options: ["Synecdoque", "Métonymie", "Antithèse", "Ellipse"], answer: "Synecdoque" },
+  { question: "À quel courant littéraire appartient Baudelaire ?", options: ["Symbolisme", "Romantisme", "Classicisme", "Baroque"], answer: "Symbolisme" },
+  { question: "Quel mouvement critique la société par la satire ?", options: ["Satirique", "Romantique", "Classique", "Épique"], answer: "Satirique" },
+  { question: "Quel procédé consiste à répéter une même idée avec des mots différents ?", options: ["Pléonasme", "Anaphore", "Ellipse", "Chiasme"], answer: "Pléonasme" },
+  { question: "Quel procédé fait appel aux sens pour décrire ?", options: ["Description", "Narration", "Argumentation", "Dialogue"], answer: "Description" },
+  { question: "Quel procédé consiste à faire parler un objet ?", options: ["Prosopopée", "Métaphore", "Hyperbole", "Allitération"], answer: "Prosopopée" },
+  { question: "Quelle figure de style consiste à substituer un terme par une expression plus longue ?", options: ["Périphrase", "Métonymie", "Synecdoque", "Ellipse"], answer: "Périphrase" },
+  { question: "Quel courant littéraire est caractérisé par la mélancolie et la fuite du temps ?", options: ["Symbolisme", "Romantisme", "Classicisme", "Baroque"], answer: "Baroque" },
+  { question: "Quel registre exprime la peur de l’inconnu et du surnaturel ?", options: ["Fantastique", "Comique", "Tragique", "Épique"], answer: "Fantastique" },
+  { question: "Quel procédé met en opposition deux idées ou mots dans une même phrase ?", options: ["Antithèse", "Oxymore", "Hyperbole", "Anaphore"], answer: "Antithèse" },
+  { question: "Quel est le contraire d’une litote ?", options: ["Hyperbole", "Oxymore", "Allégorie", "Anaphore"], answer: "Hyperbole" },
+  { question: "Quel procédé utilise une image prolongée sur plusieurs vers ou phrases ?", options: ["Allégorie", "Métaphore", "Comparaison", "Oxymore"], answer: "Allégorie" },
+  { question: "Quel mouvement est contemporain de la Révolution française ?", options: ["Lumières", "Romantisme", "Classicisme", "Baroque"], answer: "Lumières" },
+  { question: "Quel registre met en scène des héros et des exploits ?", options: ["Épique", "Fantastique", "Comique", "Polémique"], answer: "Épique" },
+  { question: "Quel procédé consiste à souligner la répétition d’un mot en fin de phrase ?", options: ["Anadiplose", "Anaphore", "Ellipse", "Chiasme"], answer: "Anadiplose" },
+  { question: "Quel mouvement littéraire privilégie l’imagination et le rêve ?", options: ["Symbolisme", "Classicisme", "Réalisme", "Naturalisme"], answer: "Symbolisme" },
+  { question: "Quel procédé consiste à dire moins pour faire entendre plus ?", options: ["Litote", "Hyperbole", "Ellipse", "Anaphore"], answer: "Litote" },
+  { question: "Quel mouvement littéraire décrit la société de manière scientifique ?", options: ["Naturalisme", "Romantisme", "Classicisme", "Symbolisme"], answer: "Naturalisme" },
+  { question: "Quel registre exprime la critique avec humour ?", options: ["Satirique", "Fantastique", "Tragique", "Lyrique"], answer: "Satirique" },
+  { question: "Quel procédé consiste à poser une question sans attendre de réponse ?", options: ["Question rhétorique", "Ellipse", "Anaphore", "Chiasme"], answer: "Question rhétorique" },
+  { question: "Quel procédé consiste à rompre l’ordre logique des mots ?", options: ["Hyperbate", "Ellipse", "Anaphore", "Métonymie"], answer: "Hyperbate" },
+  { question: "Quel courant littéraire est marqué par la raison et le rationalisme ?", options: ["Lumières", "Romantisme", "Baroque", "Symbolisme"], answer: "Lumières" },
+  { question: "Quel registre utilise la menace et la fatalité ?", options: ["Tragique", "Fantastique", "Comique", "Épique"], answer: "Tragique" },
+  { question: "Quel mouvement est caractérisé par la recherche de la simplicité et de l’équilibre ?", options: ["Classicisme", "Romantisme", "Baroque", "Naturalisme"], answer: "Classicisme" },
+  { question: "Quel procédé consiste à reprendre les mots dans l’ordre inverse ?", options: ["Chiasme", "Anaphore", "Ellipse", "Hyperbole"], answer: "Chiasme" },
+  { question: "Quel procédé désigne une exagération qui frôle le ridicule ?", options: ["Hyperbole", "Litote", "Oxymore", "Antithèse"], answer: "Hyperbole" },
+  { question: "Quel est le registre de l’émotion et du sentiment ?", options: ["Lyrique", "Comique", "Satirique", "Polémique"], answer: "Lyrique" },
+  { question: "Quel procédé consiste à remplacer un mot par un groupe de mots ?", options: ["Périphrase", "Synecdoque", "Métonymie", "Ellipse"], answer: "Périphrase" },
+  { question: "Quel registre met en avant la raison et la logique ?", options: ["Didactique", "Comique", "Lyrique", "Tragique"], answer: "Didactique" },
+  { question: "Quel procédé consiste à insister sur une opposition ?", options: ["Antithèse", "Allitération", "Oxymore", "Ellipse"], answer: "Antithèse" },
+  { question: "Quel procédé remplace un mot par un son évoquant ce mot ?", options: ["Onomatopée", "Allitération", "Assonance", "Hyperbole"], answer: "Onomatopée" },
+  { question: "Quel mouvement littéraire est né après la Révolution française ?", options: ["Romantisme", "Classicisme", "Baroque", "Lumières"], answer: "Romantisme" },
+  { question: "Quel procédé consiste à reprendre le même mot plusieurs fois ?", options: ["Anaphore", "Ellipse", "Chiasme", "Pléonasme"], answer: "Anaphore" },
+  { question: "Quel registre vise à faire réfléchir en provoquant la colère ?", options: ["Polémique", "Comique", "Lyrique", "Épique"], answer: "Polémique" },
+  { question: "Quel procédé consiste à substituer un mot par un autre qui lui est proche ?", options: ["Métonymie", "Antithèse", "Hyperbole", "Anaphore"], answer: "Métonymie" },
+  { question: "Quel registre est centré sur la souffrance et la fatalité ?", options: ["Tragique", "Lyrique", "Comique", "Épique"], answer: "Tragique" },
+  { question: "Quel mouvement est caractérisé par un retour à l’Antiquité ?", options: ["Classicisme", "Romantisme", "Baroque", "Naturalisme"], answer: "Classicisme" },
+  { question: "Quel procédé consiste à utiliser plusieurs synonymes pour insister ?", options: ["Pléonasme", "Anaphore", "Ellipse", "Hyperbole"], answer: "Pléonasme" },
+  { question: "Quel procédé consiste à dire le contraire de ce que l’on pense ?", options: ["Ironie", "Litote", "Hyperbole", "Antithèse"], answer: "Ironie" },
+  { question: "Quel courant littéraire est marqué par le refus de la réalité ?", options: ["Symbolisme", "Réalisme", "Classicisme", "Lumières"], answer: "Symbolisme" },
+  { question: "Quel registre est utilisé pour faire rire par la moquerie ?", options: ["Comique", "Tragique", "Fantastique", "Polémique"], answer: "Comique" },
+  { question: "Quel procédé consiste à insister par la répétition au milieu des phrases ?", options: ["Epizeuxe", "Anaphore", "Ellipse", "Chiasme"], answer: "Epizeuxe" },
+  { question: "Quel procédé utilise une image sans outil comparatif ?", options: ["Métaphore", "Comparaison", "Allégorie", "Personnification"], answer: "Métaphore" },
+  { question: "Quel registre met en avant l’émerveillement et le merveilleux ?", options: ["Fantastique", "Tragique", "Comique", "Satirique"], answer: "Fantastique" },
+  { question: "Quel procédé consiste à mettre en scène des idées abstraites sous forme concrète ?", options: ["Allégorie", "Métaphore", "Comparaison", "Personnification"], answer: "Allégorie" },
+  { question: "Quel mouvement littéraire est marqué par le réalisme scientifique ?", options: ["Naturalisme", "Romantisme", "Classicisme", "Symbolisme"], answer: "Naturalisme" }
+]
+
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    function fadeOutIn(callback) {
+      const quizDiv = document.getElementById("quiz");
+      quizDiv.classList.add("fade-out");
+      setTimeout(() => {
+        callback();
+        quizDiv.classList.remove("fade-out");
+        quizDiv.classList.add("fade-in");
+        setTimeout(() => quizDiv.classList.remove("fade-in"), 500);
+      }, 500);
+    }
+
+    function showQuestion() {
+      const q = quiz[currentQuestion];
+      document.getElementById("question").textContent = q.question;
+      const optionsDiv = document.getElementById("options");
+      optionsDiv.innerHTML = "";
+      q.options.forEach(option => {
+        const button = document.createElement("button");
+        button.textContent = option;
+        button.onclick = () => checkAnswer(option);
+        optionsDiv.appendChild(button);
+      });
+    }
+
+    function checkAnswer(selected) {
+      const result = document.getElementById("result");
+      if (selected === quiz[currentQuestion].answer) {
+        score++;
+        result.textContent = "✅ Bonne réponse !";
+      } else {
+        result.textContent = `❌ Mauvaise réponse. La bonne réponse était : ${quiz[currentQuestion].answer}`;
+      }
+      currentQuestion++;
+      if (currentQuestion < quiz.length) {
+        setTimeout(() => {
+          result.textContent = "";
+          fadeOutIn(showQuestion);
+        }, 2000);
+      } else {
+        setTimeout(() => {
+          document.getElementById("quiz").innerHTML = `<h2>Quiz terminé 🎉</h2><p>Ton score : ${score} / ${quiz.length}</p>`;
+        }, 2000);
+      }
+    }
+
+    window.onload = () => {
+      showQuestion();
+      document.getElementById("bgm").play();
+    };
+  </script>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('rose.GIF') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    #quiz {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 50px;
+      max-width: 900px;
+      width: 90%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      border-radius: 10px;
+      transition: opacity 0.5s ease;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      display: block;
+      margin: 15px auto;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #f5c2db;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #f5a8c2;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .fade-out {
+      opacity: 0;
+    }
+
+    .fade-in {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <audio id="bgm" autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2023/03/30/audio_f2d1d506db.mp3" type="audio/mpeg" />
+    Ton navigateur ne supporte pas l'audio HTML5.
+  </audio>
+  <div id="quiz">
+    <h1>Quiz Bac Français 🇫🇷</h1>
+    <p id="question"></p>
+    <div id="options"></div>
+    <div id="result"></div>
+  </div>
+</body>
+</html>
